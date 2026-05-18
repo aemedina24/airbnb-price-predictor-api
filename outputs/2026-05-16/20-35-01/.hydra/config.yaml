@@ -1,0 +1,25 @@
+data:
+  path: data/raw/airbnb.csv
+features:
+  text:
+  - neighbourhood_cleansed
+  - property_type
+  - room_type
+  numeric:
+  - accommodates
+  - bathrooms
+  - bedrooms
+  - beds
+  - guests_included
+  - minimum_nights
+  - number_of_reviews
+  - review_scores_rating
+  binary:
+  - host_is_superhost
+  - instant_bookable
+target: price
+model:
+  type: linear_regression
+train:
+  test_size: 0.2
+  random_state: 42

@@ -1,0 +1,22 @@
+data:
+  path: data/raw/listings.csv
+features:
+  text:
+  - neighbourhood_cleansed
+  - property_type
+  - room_type
+  numeric:
+  - accommodates
+  - bathrooms
+  - bedrooms
+  - beds
+  - guests_included
+  - minimum_nights
+  - number_of_reviews
+  - review_scores_rating
+  binary:
+  - host_is_superhost
+  - instant_bookable
+target: price
+model: null
+train: null

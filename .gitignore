@@ -1,0 +1,27 @@
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+
+# Caché de Python
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Configuración de VS Code e IDEs
+.vscode/
+.idea/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# 🚨 NUEVO: Ignorar carpetas de datos y archivos pesados
+**/data/
+*.csv
+*.xlsx
+
+# 🚨 Forzar a Git a que SÍ suba el modelo de la API
+!app/pipeline_ganador.pkl

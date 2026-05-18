@@ -1,0 +1,8 @@
+data:
+  path: data/raw/airbnb.csv
+  target: price
+model:
+  type: linear_regression
+train:
+  test_size: 0.2
+  random_state: 42
