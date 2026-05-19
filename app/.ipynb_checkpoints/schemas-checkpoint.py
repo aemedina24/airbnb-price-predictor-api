@@ -34,7 +34,7 @@ class PredictionInput(BaseModel):
             }
         }
 
-
+# 🚨 AQUÍ AGREGAMOS EL EJEMPLO DE SALIDA BONITO:
 class PredictionOutput(BaseModel):
     estimated_price: float
 

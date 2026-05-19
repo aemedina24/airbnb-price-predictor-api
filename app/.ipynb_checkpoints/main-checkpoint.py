@@ -13,7 +13,7 @@ if APP_PATH not in sys.path:
 if ROOT_PATH not in sys.path:
     sys.path.append(ROOT_PATH)
 
-# 2. Importación segura de esquemas
+# 2. Importación segura de tus esquemas renovados
 from schemas import PredictionInput, PredictionOutput
 
 # 3. Inicialización de FastAPI con diseño mejorado (Markdown)
@@ -66,7 +66,7 @@ def make_prediction(payload: PredictionInput):
         # 1. El modelo realiza la predicción (PyCaret devuelve un DataFrame/Series con los resultados)
         prediction_result = model.predict(input_data)
         
-        # 2. Extrae el valor numérico logarítmico de forma segura según el formato de salida
+        # 2. Extraemos el valor numérico logarítmico de forma segura según el formato de salida
         if hasattr(prediction_result, 'iloc'):
             prediction_log = float(prediction_result.iloc[0])
         elif isinstance(prediction_result, (list, np.ndarray)):
@@ -74,7 +74,7 @@ def make_prediction(payload: PredictionInput):
         else:
             prediction_log = float(prediction_result)
             
-        # 3.  REVERTIMOS EL LOGARITMO 
+        # 3. 🔥 REVERTIMOS EL LOGARITMO EN CALIENTE EN LA API
         real_price = np.expm1(prediction_log)
         
         # Validación de seguridad matemática
