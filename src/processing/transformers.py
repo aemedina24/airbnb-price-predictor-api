@@ -1,6 +1,16 @@
-import pandas as pd
+# =========================
+# Standard library imports
+# =========================
+import re
+import unicodedata
+
+# =========================
+# Third-party imports
+# =========================
 import numpy as np
+import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
+
 
 class MissingIndicatorTargeted(BaseEstimator, TransformerMixin):
     def __init__(self, threshold=0.20):
@@ -41,10 +51,6 @@ class MissingIndicatorTargeted(BaseEstimator, TransformerMixin):
         return X_df
     
 
-
-import pandas as pd
-from sklearn.base import BaseEstimator, TransformerMixin
-
 class CleanBinaryFeatures(BaseEstimator, TransformerMixin):
     def __init__(self, binary_columns: list):
         self.binary_columns = binary_columns
@@ -82,13 +88,6 @@ class CleanBinaryFeatures(BaseEstimator, TransformerMixin):
             
         return X_df
     
-
-
-import pandas as pd
-import numpy as np
-import re
-import unicodedata
-from sklearn.base import BaseEstimator, TransformerMixin
 
 class CleanAndGroupTextFeatures(BaseEstimator, TransformerMixin):
     def __init__(self, text_columns: list, threshold: float = 0.006, other_label: str = 'otras'):
