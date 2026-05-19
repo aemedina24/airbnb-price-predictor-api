@@ -26,7 +26,16 @@ La solución abarca desde el análisis de datos y entrenamiento del modelo, hast
 
 ##  Cómo Ejecutar el Proyecto Localmente
 
-1. **Clonar el repositorio:**
-   ```bash
+# 1. Clonar el repositorio:
+   
    git clone [https://github.com/aemedina24/airbnb-price-predictor-api](https://github.com/aemedina24/airbnb-price-predictor-api.git)
-   cd Proyecto_3
+  
+
+# 2. Crear el entorno virtual e instalar dependencias automáticamente
+poetry install
+
+# 3. Levantar Jupyter Lab de manera directa en el entorno aislado
+poetry run jupyter lab
+
+# 4. # usar servidor web usando FastAPI e hilos de Uvicorn
+poetry run uvicorn src.api.main:app --reload
