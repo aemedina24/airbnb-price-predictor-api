@@ -38,4 +38,4 @@ poetry install
 poetry run jupyter lab
 
 ## 4. Usar servidor web usando FastAPI e hilos de Uvicorn
-poetry run uvicorn src.api.main:app --reload
+ poetry run uvicorn main:app --reload --app-dir app
