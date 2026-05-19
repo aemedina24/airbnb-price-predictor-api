@@ -24,7 +24,7 @@ La solución abarca desde el análisis de datos y entrenamiento del modelo, hast
 
 ---
 
-## 💻 Cómo Ejecutar el Proyecto Localmente
+##  Cómo Ejecutar el Proyecto Localmente
 
 1. **Clonar el repositorio:**
    ```bash
